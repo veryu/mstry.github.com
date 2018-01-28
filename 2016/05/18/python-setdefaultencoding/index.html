@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.1" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.1" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="mstry.mdmarkdown source of mstry.github.io articles">
+<meta property="og:type" content="website">
+<meta property="og:title" content="骑哒哒哒的少年">
+<meta property="og:url" content="http://yoursite.com/README.html">
+<meta property="og:site_name" content="骑哒哒哒的少年">
+<meta property="og:description" content="mstry.mdmarkdown source of mstry.github.io articles">
+<meta property="og:updated_time" content="2018-01-13T09:04:06.992Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="骑哒哒哒的少年">
+<meta name="twitter:description" content="mstry.mdmarkdown source of mstry.github.io articles">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/README.html"/>
+
+
+
+
+
+  <title>python默认编码设置 | 骑哒哒哒的少年</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">骑哒哒哒的少年</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/05/18/python-setdefaultencoding/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mstry">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="骑哒哒哒的少年">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">python默认编码设置</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-18T22:16:54+08:00">2016-05-18</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming/" itemprop="url" rel="index">
+                    <span itemprop="name">programming</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="1-&#x4ECB;&#x7ECD;"><a href="#1-&#x4ECB;&#x7ECD;" class="headerlink" title="1. &#x4ECB;&#x7ECD;"></a>1. &#x4ECB;&#x7ECD;</h1><p>python&#x5185;&#x90E8;&#x7F16;&#x7801;(&#x5B57;&#x89E3;&#x7801;)unicode&#xFF0C;&#x5047;&#x8BBE;&#x73B0;&#x5728;&#x8981;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x76F8;&#x7B49;&#xFF0C;&#x5728;python2&#x4E2D;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x7B49;&#x4EF7;&#x4E8E;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#xFF0C;&#x4E24;&#x4E2A;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#x76F8;&#x540C;&#x5E76;&#x4E0D;&#x610F;&#x5473;&#x7740;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x76F8;&#x7B49;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x53EF;&#x80FD;&#x662F;&#x7531;&#x4E0D;&#x540C;&#x7684;&#x5B57;&#x7B26;&#x6309;&#x7167;&#x4E0D;&#x540C;&#x7684;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x751F;&#x6210;&#x7684;&#x6070;&#x597D;&#x76F8;&#x540C;&#x7684;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x5728;&#x5904;&#x7406;&#x5B57;&#x7B26;&#x4E32;&#x65F6;&#xFF0C;python&#x4F1A;&#x6839;&#x636E;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x7F16;&#x7801;&#x683C;&#x5F0F;&#xFF0C;&#x5148;&#x5C06;&#x5B57;&#x7B26;&#x89E3;&#x7801;&#x6210;&#x5185;&#x90E8;&#x7F16;&#x7801;unicode&#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;str&#x5BF9;&#x8C61;&#x6CA1;&#x6709;&#x663E;&#x5F0F;&#x8C03;&#x7528;decode&#x6307;&#x660E;&#x7F16;&#x7801;&#x7CFB;&#x7EDF;&#xFF0C;python&#x5C31;&#x4F1A;&#x7528;&#x9ED8;&#x8BA4;&#x7684;&#x7CFB;&#x7EDF;&#x7F16;&#x7801;&#x683C;&#x5F0F;&#xFF0C;&#x6765;&#x89E3;&#x7801;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> sys</div><div class="line">sys.getdefaultencoding()  <span class="comment"># check python default encoding, usually &apos;ascii&apos;</span></div></pre></td></tr></table></figure>
+<h1 id="2-&#x8BBE;&#x7F6E;&#x65B9;&#x6CD5;"><a href="#2-&#x8BBE;&#x7F6E;&#x65B9;&#x6CD5;" class="headerlink" title="2. &#x8BBE;&#x7F6E;&#x65B9;&#x6CD5;"></a>2. &#x8BBE;&#x7F6E;&#x65B9;&#x6CD5;</h1><p>python2.5&#x4E4B;&#x540E;&#x65E0;&#x6CD5;&#x8C03;&#x7528;sys.setdefaultencoding()&#x51FD;&#x6570;&#x6765;&#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x7F16;&#x7801;&#xFF0C;&#x56E0;&#x4E3A;python&#x5728;&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x8C03;&#x7528;site.py&#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x8BBE;&#x7F6E;&#x5B8C;&#x9ED8;&#x8BA4;&#x7F16;&#x7801;&#x540E;&#x4F1A;&#x5220;&#x9664;sys&#x7684;setdefaultencoding&#x65B9;&#x6CD5;&#x3002;&#x5728;&#x786E;&#x5B9A;sys&#x5DF2;&#x7ECF;&#x5BFC;&#x5165;&#x7684;&#x60C5;&#x51B5;&#x4E0B;, &#x53EF;&#x4EE5;reload sys&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x4E4B;&#x540E;, &#x518D;sys.setdefaultencoding(&#x2018;utf8&#x2019;)&#x3002;</p>
+<h2 id="2-1-&#x4E34;&#x65F6;&#x8BBE;&#x7F6E;"><a href="#2-1-&#x4E34;&#x65F6;&#x8BBE;&#x7F6E;" class="headerlink" title="2.1 &#x4E34;&#x65F6;&#x8BBE;&#x7F6E;"></a>2.1 &#x4E34;&#x65F6;&#x8BBE;&#x7F6E;</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> sys</div><div class="line">reload(sys)</div><div class="line">sys.setdefaultencoding(<span class="string">&apos;utf-8&apos;</span>)</div><div class="line">sys.getdefaultencoding()</div></pre></td></tr></table></figure>
+<h2 id="2-2-&#x6C38;&#x4E45;&#x8BBE;&#x7F6E;"><a href="#2-2-&#x6C38;&#x4E45;&#x8BBE;&#x7F6E;" class="headerlink" title="2.2 &#x6C38;&#x4E45;&#x8BBE;&#x7F6E;"></a>2.2 &#x6C38;&#x4E45;&#x8BBE;&#x7F6E;</h2><ul>
+<li>&#x7F16;&#x8F91;site.py&#xFF0C;&#x4FEE;&#x6539;setencoding()&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;</li>
+<li><p>&#x5728;site-packages&#x6216;/etc/python2.7&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x65B0;&#x5EFA;sitecustomize.py&#xFF0C;&#x52A0;&#x5165;&#x8BBE;&#x7F6E;&#x4EE3;&#x7801;</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># filename: sitecustomize.py</span></div><div class="line"><span class="keyword">import</span> sys</div><div class="line">sys.setdefaultencoding(<span class="string">&apos;utf-8&apos;</span>)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>sitecustomize.py&#x662F;&#x5728;site.py&#x88AB;import&#x6267;&#x884C;&#x7684;, &#x56E0;&#x4E3A;sys.setdefaultencoding()&#x662F;&#x5728;site.py&#x7684;&#x6700;&#x540E;&#x5220;&#x9664;&#x7684;, &#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x5728;sitecustomize.py&#x4F7F;&#x7528;sys.setdefaultencoding()&#x3002;</p>
+<h1 id="3-&#x6CE8;&#x610F;&#x4E8B;&#x9879;"><a href="#3-&#x6CE8;&#x610F;&#x4E8B;&#x9879;" class="headerlink" title="3. &#x6CE8;&#x610F;&#x4E8B;&#x9879;"></a>3. &#x6CE8;&#x610F;&#x4E8B;&#x9879;</h1><p>python2&#x4E2D;&#x907F;&#x514D;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x9519;&#x8BEF;&#x7684;&#x51E0;&#x4E2A;&#x5EFA;&#x8BAE;&#xFF1A;</p>
+<ul>
+<li>&#x6240;&#x6709;text string&#x90FD;&#x5E94;&#x8BE5;&#x662F;unicode&#x7C7B;&#x578B;&#xFF0C;&#x800C;&#x4E0D;&#x662F;str&#xFF0C;&#x5373;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x58F0;&#x660E;&#x65B9;&#x5F0F;&#x4E3A;: <code>s = u&apos;xxxx&apos;</code>&#x3002;</li>
+<li>&#x5728;&#x9700;&#x8981;&#x8F6C;&#x6362;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x663E;&#x5F0F;&#x8F6C;&#x6362;&#x3002;&#x4ECE;&#x5B57;&#x8282;&#x89E3;&#x7801;&#x6210;&#x6587;&#x672C;&#xFF0C;&#x7528;<code>var.decode(encoding)</code>&#xFF0C;&#x4ECE;&#x6587;&#x672C;&#x7F16;&#x7801;&#x6210;&#x5B57;&#x8282;&#xFF0C;&#x7528;<code>var.encode(encoding)</code>&#x3002;</li>
+<li>&#x4ECE;&#x5916;&#x90E8;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x5B83;&#x662F;&#x5B57;&#x8282;&#xFF0C;&#x7136;&#x540E;decode&#x6210;&#x9700;&#x8981;&#x7684;&#x6587;&#x672C;&#xFF1B;&#x540C;&#x6837;&#x7684;&#xFF0C;&#x5F53;&#x9700;&#x8981;&#x5411;&#x5916;&#x90E8;&#x53D1;&#x9001;&#x6587;&#x672C;&#x65F6;&#xFF0C;encode&#x6210;&#x5B57;&#x8282;&#x518D;&#x53D1;&#x9001;&#x3002;</li>
+</ul>
+<h1 id="4-&#x53C2;&#x8003;&#x8D44;&#x6599;"><a href="#4-&#x53C2;&#x8003;&#x8D44;&#x6599;" class="headerlink" title="4. &#x53C2;&#x8003;&#x8D44;&#x6599;"></a>4. &#x53C2;&#x8003;&#x8D44;&#x6599;</h1><ul>
+<li><a href="http://www.cnblogs.com/samlee/archive/2012/03/19/2406510.html" target="_blank" rel="external">python default coding</a></li>
+<li><a href="http://blog.ernest.me/post/python-setdefaultencoding-unicode-bytes" target="_blank" rel="external">&#x7ACB;&#x5373;&#x505C;&#x6B62;&#x4F7F;&#x7528; setdefaultencoding(&#x2018;utf-8&#x2019;)&#xFF0C; &#x4EE5;&#x53CA;&#x4E3A;&#x4EC0;&#x4E48;</a></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/15/codeviz-install-and-use/" rel="next" title="CentOS7安装使用codeviz">
+                <i class="fa fa-chevron-left"></i> CentOS7安装使用codeviz
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/07/2016-06-07-centos7-minimal-xfce4/" rel="prev" title="CentOS7最小系统安装xfce4">
+                CentOS7最小系统安装xfce4 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">mstry</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">分类</span>
+                  
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-介绍"><span class="nav-number">1.</span> <span class="nav-text">1. 介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-设置方法"><span class="nav-number">2.</span> <span class="nav-text">2. 设置方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-临时设置"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 临时设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-永久设置"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 永久设置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-注意事项"><span class="nav-number">3.</span> <span class="nav-text">3. 注意事项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-参考资料"><span class="nav-number">4.</span> <span class="nav-text">4. 参考资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mstry</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a> v6.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.1"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

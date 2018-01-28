@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.1" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.1" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="mstry.mdmarkdown source of mstry.github.io articles">
+<meta property="og:type" content="website">
+<meta property="og:title" content="骑哒哒哒的少年">
+<meta property="og:url" content="http://yoursite.com/README.html">
+<meta property="og:site_name" content="骑哒哒哒的少年">
+<meta property="og:description" content="mstry.mdmarkdown source of mstry.github.io articles">
+<meta property="og:updated_time" content="2018-01-13T09:04:06.992Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="骑哒哒哒的少年">
+<meta name="twitter:description" content="mstry.mdmarkdown source of mstry.github.io articles">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/README.html"/>
+
+
+
+
+
+  <title>PRML笔记1 | 骑哒哒哒的少年</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">骑哒哒哒的少年</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/04/prml-ch1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mstry">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="骑哒哒哒的少年">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">PRML笔记1</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-04T22:17:39+08:00">2018-01-04</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/PRML/" itemprop="url" rel="index">
+                    <span itemprop="name">PRML</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="1-Gaussion&#x5206;&#x5E03;"><a href="#1-Gaussion&#x5206;&#x5E03;" class="headerlink" title="1. Gaussion&#x5206;&#x5E03;"></a>1. Gaussion&#x5206;&#x5E03;</h1><h2 id="1-1-&#x57FA;&#x672C;&#x6027;&#x8D28;"><a href="#1-1-&#x57FA;&#x672C;&#x6027;&#x8D28;" class="headerlink" title="1.1 &#x57FA;&#x672C;&#x6027;&#x8D28;"></a>1.1 &#x57FA;&#x672C;&#x6027;&#x8D28;</h2><p>(1) &#x6C42;&#x8BC1;&#xFF1A;&#x9AD8;&#x65AF;&#x5206;&#x5E03;&#x6EE1;&#x8DB3;&#x5F52;&#x4E00;&#x5316;&#xFF0C;&#x5373;$\int_{-\infty}^{+\infty}{\mathcal N(x|\mu,\sigma^2)dx}=1$</p>
+<p>&#x8BC1;&#x660E;&#xFF1A;&#x8BB0;</p>
+<script type="math/tex; mode=display">I=\int_{-\infty}^{+\infty}{\mathcal N(x|\mu,\sigma^2)dx}=\int_{-\infty}^{+\infty}{\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{1}{2\sigma^2}(x-\mu)^2}dx}</script><p>&#x4EE4;$y=x-u$&#xFF0C;&#x5219;</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+I&=\int_{-\infty}^{+\infty}{\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{1}{2\sigma^2}y^2}dy} \\
+I^2&=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}{\frac{1}{2\pi\sigma^2}e^{-\frac{1}{2\sigma^2}(u^2+v^2)}dudv}
+\end{aligned}</script><p>&#x4EE4;$u=r\sin\theta, v=r\cos\theta$&#xFF0C;&#x5219;$dudv=rd\theta dr$&#xFF0C;</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+I^2&=\int_{0}^{2\pi}\int_{0}^{+\infty}{\frac{1}{2\pi\sigma^2}e^{-\frac{1}{2\sigma^2}r^2}rdrd\theta}\\
+&=\int_{0}^{2\pi}{\left[-\frac{1}{2\pi}e^{-\frac{1}{2\sigma^2}r^2}\right]_{r=0}^{+\infty}d\theta}\\
+&=\int_{0}^{2\pi}{\frac{1}{2\pi}d\theta}=1
+\end{aligned}</script><script type="math/tex; mode=display">
+\begin{array}
+{l}
+\because \mathcal N(x|\mu,\sigma^2)\gt 0\\
+\therefore I \gt 0,\; \int_{-\infty}^{+\infty}{\mathcal N(x|\mu,\sigma^2)dx}=1
+\end{array}</script><p>(2) &#x6C42;&#x8BC1;&#xFF1A;&#x9AD8;&#x65AF;&#x5206;&#x5E03;&#x7684;&#x671F;&#x671B;&#xFF08;&#x4E00;&#x9636;&#x77E9;&#xFF09;&#x4E3A;&#x5747;&#x503C;$\mu$&#xFF0C;&#x5373;$\Bbb E[x]=\mu,\; x\sim\mathcal N(x|\mu,\sigma^2)$</p>
+<p>&#x8BC1;&#x660E;&#xFF1A;</p>
+<script type="math/tex; mode=display">\Bbb E[x]=\int_{-\infty}^{+\infty}{\mathcal N(x|\mu,\sigma^2)xdx}
+=\int_{-\infty}^{+\infty}{\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{1}{2\sigma^2}(x-\mu)^2}xdx}</script><p>&#x4EE4;$y=x-u$&#xFF0C;&#x5219;</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\Bbb E[x]&=\int_{-\infty}^{+\infty}{\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{1}{2\sigma^2}y^2}(y+u)dy}\\
+&=u\int_{-\infty}^{+\infty}{\mathcal N(y|1,\sigma^2)dy}+\int_{-\infty}^{+\infty}{\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{1}{2\sigma^2}y^2}ydy}\\
+&=u+\left[\frac{-\sigma^2}{\sqrt{2\pi\sigma^2}}e^{-\frac{1}{2\sigma^2}y^2}\right]_{y=-\infty}^{+\infty}\\
+&=u
+\end{aligned}</script><p>(3) &#x6C42;&#x8BC1;&#xFF1A;&#x9AD8;&#x65AF;&#x5206;&#x5E03;&#x7684;&#x4E8C;&#x9636;&#x77E9;&#x4E3A;$\mu^2+\sigma^2$&#xFF0C;&#x5373;$\Bbb E[x^2]=\mu^2+\sigma^2,\; x\sim\mathcal N(x|\mu,\sigma^2)$</p>
+<p>&#x8BC1;&#x660E;&#xFF1A; &#x5DF2;&#x77E5;&#x9AD8;&#x65AF;&#x5206;&#x5E03;&#x6EE1;&#x8DB3;&#x5F52;&#x4E00;&#x5316;&#xFF0C;&#x5373;$\int_{-\infty}^{+\infty}{\mathcal N(x|\mu,\sigma^2)dx}=1$&#xFF0C;&#x5219;</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+0&=\frac{\partial}{\partial\sigma^2}\int_{-\infty}^{+\infty}{\mathcal N(x|\mu,\sigma^2)dx}\\
+&=\int_{-\infty}^{+\infty}{\left[\frac{\partial}{\partial\sigma^2}\mathcal N(x|\mu,\sigma^2)\right]dx}\\
+&=\int_{-\infty}^{+\infty}{\left[
+-\frac{1}{2\sigma^2}\mathcal N(x|\mu,\sigma^2) + \frac{(x-u)^2}{2\sigma^4}\mathcal N(x|\mu,\sigma^2)
+\right]dx}\\
+&=\int_{-\infty}^{+\infty}{\left[-\sigma^2\mathcal N(x|\mu,\sigma^2) + (x-u)^2\mathcal N(x|\mu,\sigma^2)\right]dx}\\
+&=-\sigma^2 + \int_{-\infty}^{+\infty}{\mathcal N(x|\mu,\sigma^2)x^2dx} - \mu^2
+\end{aligned}</script><p>&#x53EF;&#x5F97;&#xFF1A;</p>
+<script type="math/tex; mode=display">\Bbb E[x^2]=\int_{-\infty}^{+\infty}{\mathcal N(x|\mu,\sigma^2)x^2dx} = \mu^2+\sigma^2</script><h1 id="1-2-&#x591A;&#x7EF4;&#x9AD8;&#x65AF;&#x5206;&#x5E03;"><a href="#1-2-&#x591A;&#x7EF4;&#x9AD8;&#x65AF;&#x5206;&#x5E03;" class="headerlink" title="1.2 &#x591A;&#x7EF4;&#x9AD8;&#x65AF;&#x5206;&#x5E03;"></a>1.2 &#x591A;&#x7EF4;&#x9AD8;&#x65AF;&#x5206;&#x5E03;</h1><script type="math/tex; mode=display">\mathcal N({\bf x}|\mu, \Sigma)=\frac{1}{(2\pi)^{\frac D 2}\mid\Sigma\mid}\exp\left\{-\frac{1}{2}({\bf x}-\mu)^T{\mid\Sigma\mid}^{-1}({\bf x}-\mu)\right\}</script><h1 id="1-3-&#x9AD8;&#x65AF;&#x5206;&#x5E03;&#x7684;&#x6700;&#x5927;&#x4F3C;&#x7136;&#x4F30;&#x8BA1;"><a href="#1-3-&#x9AD8;&#x65AF;&#x5206;&#x5E03;&#x7684;&#x6700;&#x5927;&#x4F3C;&#x7136;&#x4F30;&#x8BA1;" class="headerlink" title="1.3 &#x9AD8;&#x65AF;&#x5206;&#x5E03;&#x7684;&#x6700;&#x5927;&#x4F3C;&#x7136;&#x4F30;&#x8BA1;"></a>1.3 &#x9AD8;&#x65AF;&#x5206;&#x5E03;&#x7684;&#x6700;&#x5927;&#x4F3C;&#x7136;&#x4F30;&#x8BA1;</h1><p>&#x96C6;&#x5408;${\tt x}=(x_1,x_2,\ldots,x_N)^T$&#x662F;&#x5BF9;&#x6807;&#x91CF;$x$&#x7684;$N$&#x6B21;&#x89C2;&#x6D4B;&#x3002;&#x5047;&#x8BBE;&#x8FD9;&#x4E2A;&#x96C6;&#x5408;&#x7684;$N$&#x4E2A;&#x6807;&#x91CF;&#xFF0C;&#x72EC;&#x7ACB;&#x7684;&#x53D6;&#x81EA;&#x4EE5;$\mu$&#x4E3A;&#x5747;&#x503C;&#xFF0C;\sigma^2&#x4E3A;&#x65B9;&#x5DEE;&#x7684;&#x9AD8;&#x65AF;&#x5206;&#x5E03;&#xFF0C;&#xFF08;&#x72EC;&#x7ACB;&#x53D6;&#x81EA;&#x540C;&#x4E00;&#x5206;&#x5E03;&#x7684;&#x6570;&#x636E;&#x70B9;&#xFF0C;&#x88AB;&#x79F0;&#x4F5C;&#x72EC;&#x7ACB;&#x540C;&#x5206;&#x5E03;&#xFF0C;independent and identically distributed, i.i.d&#xFF09;&#x3002;</p>
+<p>&#x56E0;&#x4E3A;&#x6570;&#x636E;&#x96C6;${\tt x}$&#x662F;&#x72EC;&#x7ACB;&#x540C;&#x5206;&#x5E03;&#xFF0C;&#x5219;&#x8BE5;&#x6570;&#x636E;&#x96C6;&#x51FA;&#x73B0;&#x7684;&#x6982;&#x7387;&#x4E3A;&#xFF1A;</p>
+<script type="math/tex; mode=display">p({\tt x}|\mu,\sigma^2)=\prod_{n=1}^N\mathcal N(x_n|\mu,\sigma^2)\tag{1.3.1}\label{1.3.1}</script><p>&#x516C;&#x5F0F;$\eqref{1.3.1}$&#x5373;&#x662F;&#x9AD8;&#x65AF;&#x5206;&#x5E03;&#x7684;&#x4F3C;&#x7136;&#x51FD;&#x6570;&#x3002;&#x6839;&#x636E;&#x89C2;&#x6D4B;&#x6570;&#x636E;&#x96C6;&#x786E;&#x5B9A;&#x6982;&#x7387;&#x5206;&#x5E03;&#x53C2;&#x6570;&#x7684;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x6807;&#x51C6;&#x662F;&#x627E;&#x5230;&#x4E00;&#x7EC4;&#x53C2;&#x6570;&#x4F7F;&#x5F97;&#x4F3C;&#x7136;&#x51FD;&#x6570;&#x53D6;&#x5F97;&#x6700;&#x5927;&#x503C;&#xFF08;&#x5373;&#x8BE5;&#x89C2;&#x6D4B;&#x6570;&#x636E;&#x96C6;&#x51FA;&#x73B0;&#x7684;&#x6982;&#x7387;&#x6700;&#x5927;&#xFF09;&#x3002;<br><!-- 根据数据集在参数空间里搜索最符合观测结果的参数--></p>
+<p>&#x516C;&#x5F0F;$\eqref{1.3.1}$&#x5C0F;&#x6982;&#x7387;&#x8FDE;&#x4E58;&#xFF0C;&#x5BB9;&#x6613;&#x9020;&#x6210;&#x8BA1;&#x7B97;&#x7CBE;&#x5EA6;&#x4E0B;&#x6EA2;&#x3002;&#x901A;&#x5E38;&#x53D6;&#x8BE5;&#x4F3C;&#x7136;&#x51FD;&#x6570;&#x7684;&#x5BF9;&#x6570;&#x4F5C;&#x4E3A;&#x4F3C;&#x7136;&#x51FD;&#x6570;&#xFF0C;&#x7531;&#x4E8E;&#x5BF9;&#x6570;&#x51FD;&#x6570;&#x5355;&#x8C03;&#x9012;&#x589E;&#xFF0C;&#x6240;&#x4EE5;&#x5BF9;&#x6570;&#x4F3C;&#x7136;&#x51FD;&#x6570;&#x7684;&#x6700;&#x5927;&#x503C;&#x7B49;&#x4EF7;&#x4E8E;&#x539F;&#x51FD;&#x6570;&#x7684;&#x6700;&#x5927;&#x503C;&#x3002;</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\arg\max_{\mu,\sigma^2}p({\tt x}|\mu,\sigma^2)&=\arg\max_{\mu,\sigma^2}\ln p({\tt x}|\mu,\sigma^2)\\
+&=\arg\max_{\mu,\sigma^2}\sum_{n=1}^N\left\{-\frac{1}{2}\ln2\pi\sigma^2-\frac{1}{2\sigma^2}(x_n-\mu)^2\right\}\\
+&=\arg\max_{\mu,\sigma^2}\left\{-\frac{1}{2\sigma^2}\sum_{n=1}^N{(x_n-\mu)^2}-\frac{N}{2}\ln\sigma^2-\frac{N}{2}\ln 2\pi\right\}
+\end{aligned}
+\tag{1.3.2}\label{1.3.2}</script><script type="math/tex; mode=display">
+\arg\max_{\mu,\sigma^2}\ln p({\tt x}|\mu,\sigma^2)\Leftrightarrow
+\begin{cases}
+\frac{\partial}{\partial\mu}\ln p({\tt x}|\mu,\sigma^2)=0\\
+\frac{\partial}{\partial\sigma^2}\ln p({\tt x}|\mu,\sigma^2) = 0
+\end{cases}
+\tag{1.3.3}\label{1.3.3}</script><script type="math/tex; mode=display">
+\begin{aligned}
+&\frac{\partial}{\partial\mu}\ln p({\tt x}|\mu,\sigma^2)=0\\
+&\sum_{n=1}^N{-2(x_n-\mu_{ML})}=0\\
+&\mu_{ML}=\frac{1}{N}\sum_{n=1}^N{x_n}
+\end{aligned}
+\tag{1.3.4}\label{1.3.4}</script><script type="math/tex; mode=display">
+\begin{aligned}
+&\frac{\partial}{\partial\sigma^2}\ln p({\tt x}|\mu,\sigma^2)=0\\
+&\frac{1}{2\sigma^4}\sum_{n=1}^N\left\{(x_n-\mu)^2\right\}-\frac{N}{2\sigma^2}=0\\
+&\sigma^2_{ML}=\frac{1}{N}\sum_{n=1}^N(x_n-\mu_{ML})^2
+\end{aligned}
+\tag{1.3.5}\label{1.3.5}</script>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Gaussian-distribution/" rel="tag"># Gaussian distribution</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/17/samba-centos7/" rel="next" title="CentOS7 Samba简单设置">
+                <i class="fa fa-chevron-left"></i> CentOS7 Samba简单设置
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">mstry</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">分类</span>
+                  
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Gaussion分布"><span class="nav-number">1.</span> <span class="nav-text">1. Gaussion分布</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-基本性质"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 基本性质</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-2-多维高斯分布"><span class="nav-number">2.</span> <span class="nav-text">1.2 多维高斯分布</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-3-高斯分布的最大似然估计"><span class="nav-number">3.</span> <span class="nav-text">1.3 高斯分布的最大似然估计</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mstry</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a> v6.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.1"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
