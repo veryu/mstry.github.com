@@ -84,7 +84,7 @@
 <meta property="og:url" content="http://yoursite.com/README.html">
 <meta property="og:site_name" content="占山为王">
 <meta property="og:description" content="mstry.mdmarkdown source of mstry.github.io articles">
-<meta property="og:updated_time" content="2018-01-13T09:04:06.992Z">
+<meta property="og:updated_time" content="2018-01-13T09:04:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="占山为王">
 <meta name="twitter:description" content="mstry.mdmarkdown source of mstry.github.io articles">
@@ -323,6 +323,12 @@
 p(w|\mathcal{D})=\frac{p(\mathcal{D}|w)p(w)}{p(\mathcal{D})} \tag{2.1}\label{2.1}</script><p>&#x8D1D;&#x53F6;&#x65AF;&#x5B9A;&#x7406;&#x53F3;&#x4FA7;&#x7684;&#x91CF;$p(\mathcal{D}|w)$&#x7531;&#x89C2;&#x6D4B;&#x6570;&#x636E;&#x96C6;$\mathcal{D}$&#x6765;&#x4F30;&#x8BA1;&#xFF0C;&#x53EF;&#x4EE5;&#x88AB;&#x770B;&#x6210;&#x53C2;&#x6570;&#x5411;&#x91CF;$w$&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x88AB;&#x79F0;&#x4E3A;&#x4F3C;&#x7136;&#x51FD;&#x6570;(likelihood function &#x3002;&#x5B83;&#x8868;&#x8FBE;&#x4E86;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x53C2;&#x6570;&#x5411;&#x91CF;$w$&#x4E0B;&#xFF0C;&#x89C2;&#x6D4B;&#x6570;&#x636E;&#x51FA;&#x73B0;&#x7684;&#x53EF;&#x80FD;&#x6027;&#x7684;&#x5927;&#x5C0F;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x4F3C;&#x7136;&#x51FD;&#x6570;&#x4E0D;&#x662F;$w$&#x7684;&#x6982;&#x7387;&#x5206;&#x5E03;&#xFF0C;&#x5E76;&#x4E14;&#x5B83;&#x5173;&#x4E8E;$w$&#x7684;&#x79EF;&#x5206;&#x5E76;&#x4E0D;(&#x4E00;&#x5B9A;)&#x7B49;&#x4E8E;1&#x3002;&#x7ED9;&#x5B9A;&#x4F3C;&#x7136;&#x51FD;&#x6570;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x81EA;&#x7136;&#x8BED;&#x8A00;&#x8868;&#x8FF0;&#x8D1D;&#x53F6;&#x65AF;&#x5B9A;&#x7406;</p>
 <script type="math/tex; mode=display">posterior\propto likelihood\times prior \tag{2.2}\label{2.2}</script><p>&#x5176;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x91CF;&#x90FD;&#x53EF;&#x4EE5;&#x770B;&#x6210;$w$&#x7684;&#x51FD;&#x6570;&#x3002;<br>&#x516C;&#x5F0F;$\eqref{2.1}$&#x7684;&#x5206;&#x6BCD;&#x662F;&#x4E00;&#x4E2A;&#x5F52;&#x4E00;&#x5316;&#x5E38;&#x6570;&#xFF0C;&#x786E;&#x4FDD;&#x4E86;&#x5DE6;&#x4FA7;&#x7684;&#x540E;&#x9A8C;&#x6982;&#x7387;&#x5206;&#x5E03;&#x662F;&#x4E00;&#x4E2A;&#x5408;&#x7406;&#x7684;&#x6982;&#x7387;&#x5BC6;&#x5EA6;(&#x79EF;&#x5206;&#x4E3A;1)&#x3002;&#x5BF9;&#x516C;&#x5F0F;$\eqref{2.1}$&#x7684;&#x4E24;&#x4FA7;&#x5173;&#x4E8E;$w$&#x8FDB;&#x884C;&#x79EF;&#x5206;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x540E;&#x9A8C;&#x6982;&#x7387;&#x5206;&#x5E03;&#x548C;&#x4F3C;&#x7136;&#x51FD;&#x6570;&#x6765;&#x8868;&#x8FBE;&#x8D1D;&#x53F6;&#x65AF;&#x5B9A;&#x7406;&#x7684;&#x5206;&#x6BCD;&#xFF1A;</p>
 <script type="math/tex; mode=display">p(\mathcal{D})=\int{p(\mathcal{D}|w)p(w)dw} \tag{2.3}\label{2.3}</script><p>&#x5728;&#x8D1D;&#x53F6;&#x65AF;&#x89C2;&#x70B9;&#x548C;&#x9891;&#x7387;&#x5B66;&#x5BB6;&#x89C2;&#x70B9;&#x4E2D;&#xFF0C;&#x4F3C;&#x7136;&#x51FD;&#x6570;$p(\mathcal{D}|w)$&#x90FD;&#x8D77;&#x7740;&#x91CD;&#x8981;&#x7684;&#x4F5C;&#x7528;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x5728;&#x4E24;&#x79CD;&#x89C2;&#x70B9;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x65B9;&#x5F0F;&#x6709;&#x7740;&#x672C;&#x8D28;&#x7684;&#x4E0D;&#x540C;&#x3002;&#x5728;&#x9891;&#x7387;&#x5B66;&#x5BB6;&#x7684;&#x89C2;&#x70B9;&#x4E2D;&#xFF0C;$w$&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5B83;&#x7684;&#x503C;&#x7531;&#x67D0;&#x79CD;&#x5F62;&#x5F0F;&#x7684;&#x201C;&#x4F30;&#x8BA1;&#x201D;&#x6765;&#x786E;&#x5B9A;&#xFF0C;&#x8FD9;&#x4E2A;&#x4F30;&#x8BA1;&#x7684;&#x8BEF;&#x5DEE;&#x901A;&#x8FC7;&#x8003;&#x5BDF;&#x53EF;&#x80FD;&#x7684;&#x6570;&#x636E;&#x96C6;$\mathcal{D}$&#x7684;&#x6982;&#x7387;&#x5206;&#x5E03;&#x6765;&#x5F97;&#x5230;&#x3002;&#x76F8;&#x53CD;&#xFF0C;&#x4ECE;&#x8D1D;&#x53F6;&#x65AF;&#x7684;&#x89C2;&#x70B9;&#x6765;&#x770B;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#x96C6;$\mathcal{D}$(&#x5373;&#x5B9E;&#x9645;&#x89C2;&#x6D4B;&#x5230;&#x7684;&#x6570;&#x636E;&#x96C6;)&#xFF0C;&#x53C2;&#x6570;&#x7684;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#x901A;&#x8FC7;$w$&#x7684;&#x6982;&#x7387;&#x5206;&#x5E03;&#x6765;&#x8868;&#x8FBE;&#x3002;</p>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ul>
+<li><ol>
+<li><a href="&#x5218;&#x672A;&#x9E4F; - &#x6570;&#x5B66;&#x4E4B;&#x7F8E;&#x756A;&#x5916;&#x7BC7;&#xFF1A;&#x5E73;&#x51E1;&#x800C;&#x53C8;&#x795E;&#x5947;&#x7684;&#x8D1D;&#x53F6;&#x65AF;&#x65B9;&#x6CD5;">http://mindhacks.cn/2008/09/21/the-magical-bayesian-method/</a></li>
+</ol>
+</li>
+</ul>
 
       
     </div>
@@ -494,7 +500,7 @@ p(w|\mathcal{D})=\frac{p(\mathcal{D}|w)p(w)}{p(\mathcal{D})} \tag{2.1}\label{2.1
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-不确定性"><span class="nav-number">1.</span> <span class="nav-text">1. 不确定性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-贝叶斯定理"><span class="nav-number">2.</span> <span class="nav-text">2. 贝叶斯定理</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-不确定性"><span class="nav-number">1.</span> <span class="nav-text">1. 不确定性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-贝叶斯定理"><span class="nav-number">2.</span> <span class="nav-text">2. 贝叶斯定理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">3.</span> <span class="nav-text">References</span></a></li></ol></div>
             
 
           </div>
@@ -514,7 +520,7 @@ p(w|\mathcal{D})=\frac{p(\mathcal{D}|w)p(w)}{p(\mathcal{D})} \tag{2.1}\label{2.1
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
